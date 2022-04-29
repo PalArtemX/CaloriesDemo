@@ -59,15 +59,15 @@ class FoodViewModel: ObservableObject {
         save()
     }
         
-    func editFood(name: String, calories: Double) {
-        let food = FoodEntity(context: container.viewContext)
-        food.date = Date()
-        food.name = name
-        food.calories = calories
-        self.name = ""
-        self.calories = 0
-        save()
-    }
+//    func editFood(name: String, calories: Double) {
+//        let food = FoodEntity(context: container.viewContext)
+//        food.date = Date()
+//        food.name = name
+//        food.calories = calories
+//        self.name = ""
+//        self.calories = 0
+//        save()
+//    }
     
     func deleteFood(indexSet: IndexSet) {
         guard let index = indexSet.first else { return }
