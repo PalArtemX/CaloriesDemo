@@ -10,7 +10,7 @@ import CoreData
 
 
 struct HomeView: View {
-    @State private var showingADDView = false
+    @State private var showingAddView = false
     @EnvironmentObject var foodVM: FoodViewModel
     
     var body: some View {
@@ -27,7 +27,7 @@ struct HomeView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        showingADDView.toggle()
+                        showingAddView.toggle()
                     } label: {
                         Label("Add Food", systemImage: "plus.circle")
                             .symbolRenderingMode(.hierarchical)
@@ -37,7 +37,7 @@ struct HomeView: View {
                     EditButton()
                 }
             }
-            .sheet(isPresented: $showingADDView) {
+            .sheet(isPresented: $showingAddView) {
                 AddFoodView()
             }
         }

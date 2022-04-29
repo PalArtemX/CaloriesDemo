@@ -14,7 +14,7 @@ struct ListFoodView: View {
         List {
             ForEach(foodVM.savedEntities) { food in
                 NavigationLink {
-                    EditFoodView()
+                    DetailFoodView(food: food)
                 } label: {
                     FoodRowView(food: food)
                 }

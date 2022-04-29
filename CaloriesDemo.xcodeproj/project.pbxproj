@@ -14,7 +14,7 @@
 		F806F993281B318F00077EF8 /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F806F992281B318F00077EF8 /* AddFoodView.swift */; };
 		F806F995281B351C00077EF8 /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F806F994281B351C00077EF8 /* TimeFormatting.swift */; };
 		F806F997281B361F00077EF8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F806F996281B361F00077EF8 /* HomeView.swift */; };
-		F806F999281BE47800077EF8 /* EditFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F806F998281BE47800077EF8 /* EditFoodView.swift */; };
+		F806F999281BE47800077EF8 /* DetailFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F806F998281BE47800077EF8 /* DetailFoodView.swift */; };
 		F806F99B281BE71600077EF8 /* FoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F806F99A281BE71600077EF8 /* FoodViewModel.swift */; };
 		F806F99D281BFDBB00077EF8 /* FoodRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F806F99C281BFDBB00077EF8 /* FoodRowView.swift */; };
 		F806F99F281BFE2800077EF8 /* ListFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F806F99E281BFE2800077EF8 /* ListFoodView.swift */; };
@@ -29,7 +29,7 @@
 		F806F992281B318F00077EF8 /* AddFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodView.swift; sourceTree = "<group>"; };
 		F806F994281B351C00077EF8 /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
 		F806F996281B361F00077EF8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		F806F998281BE47800077EF8 /* EditFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFoodView.swift; sourceTree = "<group>"; };
+		F806F998281BE47800077EF8 /* DetailFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFoodView.swift; sourceTree = "<group>"; };
 		F806F99A281BE71600077EF8 /* FoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewModel.swift; sourceTree = "<group>"; };
 		F806F99C281BFDBB00077EF8 /* FoodRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRowView.swift; sourceTree = "<group>"; };
 		F806F99E281BFE2800077EF8 /* ListFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodView.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 				F806F99E281BFE2800077EF8 /* ListFoodView.swift */,
 				F806F99C281BFDBB00077EF8 /* FoodRowView.swift */,
 				F806F992281B318F00077EF8 /* AddFoodView.swift */,
-				F806F998281BE47800077EF8 /* EditFoodView.swift */,
+				F806F998281BE47800077EF8 /* DetailFoodView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,7 +188,7 @@
 				F806F99F281BFE2800077EF8 /* ListFoodView.swift in Sources */,
 				F806F95D281B2D3600077EF8 /* CaloriesDemoApp.swift in Sources */,
 				F806F96F281B2D9000077EF8 /* Food.xcdatamodeld in Sources */,
-				F806F999281BE47800077EF8 /* EditFoodView.swift in Sources */,
+				F806F999281BE47800077EF8 /* DetailFoodView.swift in Sources */,
 				F806F995281B351C00077EF8 /* TimeFormatting.swift in Sources */,
 				F806F99D281BFDBB00077EF8 /* FoodRowView.swift in Sources */,
 			);

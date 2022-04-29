@@ -59,7 +59,8 @@ class FoodViewModel: ObservableObject {
         save()
     }
         
-    func editFood(food: FoodEntity, name: String, calories: Double) {
+    func editFood(name: String, calories: Double) {
+        let food = FoodEntity(context: container.viewContext)
         food.date = Date()
         food.name = name
         food.calories = calories
