@@ -10,42 +10,17 @@ import CoreData
 
 
 struct HomeView: View {
-//    @Environment(\.managedObjectContext) var managedObjectContext
-//    @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) var food: FetchedResults<FoodEntity>
-    
     @State private var showingADDView = false
-    
     @EnvironmentObject var foodVM: FoodViewModel
     
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
-//                Text("\(Int(totalCaloriesToday())) Kcal (Today)")
-//                    .foregroundColor(.gray)
-//                    .padding(.horizontal)
+                Text("\(Int(foodVM.totalCaloriesToday())) Kcal (Today)")
+                    .foregroundColor(.gray)
+                    .padding(.horizontal)
                 
-                List {
-                    ForEach(foodVM.savedEntities) { food in
-                        NavigationLink {
-                            EditFoodView(food: food)
-                        } label: {
-                            HStack {
-                                VStack {
-                                    Text(food.name ?? "")
-                                        .bold()
-                                    
-                                    Text("\(Int(food.calories)) calories")
-                                }
-                                Spacer()
-                                Text(calcTimeSince(date: food.date ?? Date()))
-                                    .foregroundColor(.gray)
-                                    .italic()
-                            }
-                        }
-
-                    }
-                    //.onDelete(perform: deleteFood)
-                }
+                ListFoodView()
             }
             
             .navigationTitle("Calories")
@@ -67,23 +42,6 @@ struct HomeView: View {
             }
         }
     }
-    
-//    private func totalCaloriesToday() -> Double {
-//        var calorieasToday: Double = 0
-//        for item in food {
-//            if Calendar.current.isDateInToday(item.date ?? Date()) {
-//                calorieasToday += item.calories
-//            }
-//        }
-//        return calorieasToday
-//    }
-    
-//    private func deleteFood(offsets: IndexSet) {
-//        withAnimation {
-//            offsets.map { food[$0] }.forEach(managedObjectContext.delete)
-//            DataController().save(context: managedObjectContext)
-//        }
-//    }
 }
 
 

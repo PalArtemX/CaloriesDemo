@@ -39,7 +39,6 @@ class FoodViewModel: ObservableObject {
         
     }
     
-    
     func save() {
         do {
             try container.viewContext.save()
@@ -48,7 +47,6 @@ class FoodViewModel: ObservableObject {
             print("Error: save data \(error.localizedDescription)")
         }
     }
-    
     
     func addFood(name: String, calories: Double) {
         let food = FoodEntity(context: container.viewContext)
@@ -60,8 +58,7 @@ class FoodViewModel: ObservableObject {
         self.calories = 0
         save()
     }
-    
-    
+        
     func editFood(food: FoodEntity, name: String, calories: Double) {
         food.date = Date()
         food.name = name
@@ -71,5 +68,21 @@ class FoodViewModel: ObservableObject {
         save()
     }
     
+    func deleteFood(indexSet: IndexSet) {
+        guard let index = indexSet.first else { return }
+        let entity = savedEntities[index]
+        container.viewContext.delete(entity)
+        save()
+    }
+    
+    func totalCaloriesToday() -> Double {
+        var caloriesToday: Double = 0
+        for item in savedEntities {
+            if Calendar.current.isDateInToday(item.date ?? Date()) {
+                caloriesToday += item.calories
+            }
+        }
+        return caloriesToday
+    }
     
 }

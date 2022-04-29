@@ -9,26 +9,22 @@ import SwiftUI
 
 struct EditFoodView: View {
     @Environment(\.dismiss) var dismiss
-    
-    var food: FetchedResults<FoodEntity>.Element
-    
-    @State private var name = ""
-    @State private var calories: Double = 0
+    @EnvironmentObject var foodVM: FoodViewModel
     
     var body: some View {
         VStack {
             Form {
                 Section {
-                    TextField("\(food.name!)", text: $name)
+                    TextField("\(foodVM.name)", text: $foodVM.name)
                         .onAppear {
-                            name = food.name!
-                            calories = food.calories
+                            foodVM.name = foodVM.name
+                            foodVM.calories = foodVM.calories
                         }
                     Section {
                         VStack {
-                            Text("\(Int(calories))")
+                            Text("\(Int(foodVM.calories))")
                                 .font(.headline)
-                            Slider(value: $calories, in: 0...1000, step: 10)
+                            Slider(value: $foodVM.calories, in: 0...1000, step: 10)
 
                         }
                     } header: {
@@ -39,6 +35,7 @@ struct EditFoodView: View {
             HStack {
                 Spacer()
                 Button {
+                    
                     dismiss()
                 } label: {
                     Text("Submit")
@@ -63,8 +60,9 @@ struct EditFoodView: View {
 
 
 
-//struct EditFoodView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        EditFoodView()
-//    }
-//}
+struct EditFoodView_Previews: PreviewProvider {
+    static var previews: some View {
+        EditFoodView()
+            .environmentObject(FoodViewModel())
+    }
+}
